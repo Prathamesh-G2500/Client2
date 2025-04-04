@@ -74,7 +74,7 @@ const Restaurants = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5400/restaurants")
+      .get("https://server2-jbon.onrender.com /restaurants")
       .then((response) => {
         console.log("API Response:", response.data); // Debugging
         if (Array.isArray(response.data)) {

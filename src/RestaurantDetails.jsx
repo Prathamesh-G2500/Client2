@@ -73,7 +73,7 @@ const RestaurantDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5400/restaurants/${id}`)
+      .get(`https://server2-jbon.onrender.com /${id}`)
       .then((response) => {
         setRestaurant(response.data.restaurant); // Ensure correct data extraction
         setLoading(false);
