@@ -14,7 +14,7 @@ const RestaurantsByCity = () => {
   useEffect(() => {
     // Fetch all restaurants to extract unique cities
     axios
-      .get("https://server2-jbon.onrender.com ")
+      .get("https://server2-jbon.onrender.com/restaurants")
       .then((response) => {
         if (response.data && Array.isArray(response.data)) {
           const uniqueCities = [
@@ -33,7 +33,7 @@ const RestaurantsByCity = () => {
     setError(null);
 
     axios
-      .get(`http://localhost:5400/getRestaurantsByCity/${city}`)
+      .get(`https://server2-jbon.onrender.com/getRestaurantsByCity/${city}`)
       .then((response) => {
         if (response.data.restaurantList && Array.isArray(response.data.restaurantList)) {
           setRestaurants(response.data.restaurantList);
